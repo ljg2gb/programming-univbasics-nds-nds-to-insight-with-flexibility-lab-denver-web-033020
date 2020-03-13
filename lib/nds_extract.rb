@@ -1,5 +1,10 @@
+require 'pp'
+require 'pry'
 # Provided, don't edit
 require 'directors_database'
+#binding.pry
+
+pp directors_database
 
 # A method we're giving you. This "flattens"  Arrays of Arrays so: [[1,2],
 # [3,4,5], [6]] => [1,2,3,4,5,6].
@@ -30,10 +35,9 @@ def movie_with_director_name(director_name, movie_data)
   }
 end
 
-
-# Your code after this point
-
-def movies_with_director_key(name, movies_collection)
+# Your code after this point _____________________________________________________
+  
+  # MOVIES_WITH_DIRECTOR_KEY directions
   # GOAL: For each Hash in an Array (movies_collection), provide a collection
   # of movies and a directors name to the movie_with_director_name method
   # and accumulate the returned Array of movies into a new Array that's
@@ -44,20 +48,43 @@ def movies_with_director_key(name, movies_collection)
   # * movies_collection: An Array of Hashes where each Hash represents a movie
   #
   # RETURN:
-  #
   # Array of Hashes where each Hash represents a movie; however, they should all have a
   # :director_name key. This addition can be done by using the provided
   # movie_with_director_name method
+  
+def movies_with_director_key(name, movies_collection)
+  
+  index = 0
+  
+  while index < movies_collection.length do 
+    movies_collection[index][:director_name] = name 
+    #sets (key) :director_name => (value) "name" <- "name is the argument being passed through"
+    index += 1 
+  end
+  movies_collection
 end
 
 
+
 def gross_per_studio(collection)
+  hash = {} #of total worldwide_gross of all the movies from
+  index
+  while index < ______.length do
+    
+    collection[:worldwide_gross]
+    index += 1 
+  end
+  
+
+  result
+  # each studio.
+  movies_with_directors_set(nds)
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
   # return a Hash that includes the total worldwide_gross of all the movies from
   # each studio.
   #
   # INPUT:
-  # * collection: Array of Hashes where each Hash where each Hash represents a movie
+  # * collection: Array of Hashes where each Hash represents a movie
   #
   # RETURN:
   #
@@ -67,7 +94,12 @@ end
 
 def movies_with_directors_set(source)
   # GOAL: For each director, find their :movies Array and stick it in a new Array
-  #
+  # new_Array =[]
+  director_index = 0
+  while director_index < source.length do
+    new_Array << source[director_index][:movies]
+    director_index += 1
+  end
   # INPUT:
   # * source: An Array of Hashes containing director information including
   # :name and :movies
@@ -76,6 +108,7 @@ def movies_with_directors_set(source)
   #
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
+  new_Array
 end
 
 # ----------------    End of Your Code Region --------------------
