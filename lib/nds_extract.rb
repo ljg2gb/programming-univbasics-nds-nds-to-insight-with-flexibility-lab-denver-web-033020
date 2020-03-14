@@ -109,12 +109,12 @@ end
     # to have a :director_name key added to it.
   
 def movies_with_directors_set(source)
-  binding.pry
   # GOAL: For each director, find their :movies Array and put it in a new Array
   new_Array =[]
   director_index = 0
   while director_index < source.length do
     movies_array = source[director_index][:movies]
+    binding.pry
     new_Array << movies_array
     director_index += 1
   end
