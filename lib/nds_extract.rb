@@ -85,7 +85,7 @@ def gross_per_studio(collection)
     #binding.pry
 	  studio_name = collection[i][:studio] #the value
 	  worldwide_gross = collection[i][:worldwide_gross]
-	  if  gross_per_studio_hash.has_value?(studio_name) #true
+	  if  gross_per_studio_hash.has_key?(studio_name) #true
 		  gross_per_studio_hash[studio_name] += worldwide_gross
 	  else #false
 		  gross_per_studio_hash[studio_name] = worldwide_gross
