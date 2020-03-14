@@ -82,6 +82,7 @@ def gross_per_studio(collection)
   i = 0
 
   while i < collection.length do
+    binding.pry
 	  studio_name = collection[i][:studio] #the value
 	  worldwide_gross = collection[i][:worldwide_gross]
 	  if  hash.has_value?(studio_name) #true
