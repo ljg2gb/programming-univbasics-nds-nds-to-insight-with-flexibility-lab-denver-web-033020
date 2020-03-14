@@ -110,7 +110,7 @@ end
   
 def movies_with_directors_set(source)
   #binding.pry
-  # GOAL: For each director, find their :movies Array and stick it in a new Array
+  # GOAL: For each director, find their :movies Array and put it in a new Array
   new_Array =[]
   director_index = 0
   while director_index < source.length do
