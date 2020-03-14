@@ -78,23 +78,23 @@ end
     # total of all the worldwide_gross numbers for every movie in the input Hash
   
 def gross_per_studio(collection)
-  hash = {}
+  gross_per_studio_hash = {}
   i = 0
 
   while i < collection.length do
     binding.pry
 	  studio_name = collection[i][:studio] #the value
 	  worldwide_gross = collection[i][:worldwide_gross]
-	  if  hash.has_value?(studio_name) #true
-		  hash[studio_name] += worldwide_gross
+	  if  gross_per_studio_hash.has_value?(studio_name) #true
+		  gross_per_studio_hash[studio_name] += worldwide_gross
 	  else #false
-		  hash[studio_name] = worldwide_gross
+		  gross_per_studio_hash[studio_name] = worldwide_gross
 		  
     end
     i += 1
     
   end
-  hash
+  gross_per_studio_hash
   
 end
 
