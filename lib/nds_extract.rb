@@ -114,8 +114,8 @@ def movies_with_directors_set(source)
   new_Array =[]
   director_index = 0
   while director_index < source.length do
-    movies_array = source[:movies]
-    new_Array << source[:movies]
+    movies_array = source[director_index][:movies]
+    new_Array << movies_array
     director_index += 1
   end
   new_Array
