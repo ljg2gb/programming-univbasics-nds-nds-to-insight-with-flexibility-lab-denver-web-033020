@@ -114,6 +114,7 @@ def movies_with_directors_set(source)
   director_index = 0
   while director_index < source.length do
     movies_array = source[director_index][:movies]
+    director = source[director_index][:name]
     binding.pry
     new_Array << movies_array
     director_index += 1
