@@ -116,7 +116,7 @@ def movies_with_directors_set(source)
     movies_array = source[director_index][:movies]
     director = source[director_index][:name]
     binding.pry
-    new_Array << movies_array
+    new_Array << movies_with_director_key(director, movies_array)
     director_index += 1
   end
   new_Array
